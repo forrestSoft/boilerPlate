@@ -4,7 +4,6 @@ const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
   entry: {
-    // main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './server/server.js'],
     server: './server/server.js'
   },
   output: {
@@ -24,7 +23,6 @@ module.exports = {
   module: {
     rules: [
       {
-        // Transpiles ES6-8 into ES5
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
